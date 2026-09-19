@@ -54,9 +54,10 @@ public struct HomeView: View {
                 
                 // Скрытый NavigationLink для перехода
                 NavigationLink(
-                    destination: Text("Здесь откроется WebView для \(platform.name)"),
-                    isActive: $isPlatformActive
-                ) {
+          destination: PlatformView(platform: platform),
+            isActive: $isPlatformActive
+)
+) {
                     EmptyView()
                 }
             }
